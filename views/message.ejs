@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title"><%= title %></h1>
+      <div class="msg-container">
+        <div class="msg-detail-row-1">
+          <p class="username"><%= message.user %>:</p>
+          <p><%= message.added.toLocaleString() %></p>
+        </div>
+        <div class="msg-detail-row-2">
+          <p><%= message.text %></p>
+        </div>
+      </div>
+      <a class="go-back-msg-link" href="/">Go Back to Messages</a>
+    </div>
+  </body>
+</html>

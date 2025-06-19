@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title"><%= title %></h1>
+      <% messages.forEach((message, index) => { %>
+      <div class="msg-container">
+        <div class="msg-detail-row-1">
+          <p class="username"><%= message.user %>:</p>
+          <p><%= message.added.toLocaleString() %></p>
+        </div>
+        <div class="msg-detail-row-2">
+          <p><%= message.text %></p>
+        </div>
+        <div class="msg-detail-open-btn">
+          <a class="msg-detail-link" href="/message/<%= index %>">Open</a>
+        </div>
+      </div>
+      <% }); %>
+      <a class="new-msg-link" href="/new">Add a new message</a>
+    </div>
+  </body>
+</html>
